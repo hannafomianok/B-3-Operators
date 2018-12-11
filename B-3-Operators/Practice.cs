@@ -389,6 +389,16 @@ namespace B_3_Operators
             /// </summary>
             public static void B3_P8_9_CircleArea()
         {
+            const double pi = 3.14;
+
+            Console.WriteLine("Введите радиус круга");
+            double radius = Convert.ToDouble(Console.ReadLine());
+
+            double radiusSquared = Math.Pow(radius, 2);
+
+            double squre = pi * radiusSquared;
+            Console.WriteLine($"Плащадь круга равна {squre}");
+            
 
         }
 
