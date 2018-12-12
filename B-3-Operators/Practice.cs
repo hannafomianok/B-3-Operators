@@ -407,6 +407,42 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P9_9_CreaditCalculator()
         {
+            Console.WriteLine("Введите сумму кредита");
+            decimal sumLoan = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Введите проценты кредита ");
+            decimal interest = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Введите срок кредита в месяцах");
+            int months = Convert.ToInt32(Console.ReadLine());
+
+            decimal Loan = sumLoan;
+
+            decimal loanMonth = sumLoan / months;
+
+            decimal interestmonth = (interest / 100) / months;
+
+            decimal sumMonth = 0;
+
+            decimal allintersts = 0;
+
+           
+            for (int i = 1; i <= months; i++)
+            {
+                sumMonth = loanMonth + (sumLoan * interestmonth);
+                Console.WriteLine($"Cумма в {i} равна {sumMonth}");
+
+                allintersts += (sumLoan * interestmonth);
+
+                sumLoan -= loanMonth;
+
+                
+            }
+
+            decimal genSum = Loan + allintersts;
+            Console.WriteLine($"Общая сумма за период = {genSum}");
+
+
 
         }
     }
