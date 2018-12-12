@@ -20,8 +20,8 @@ namespace B_3_Operators
             b2 = !b1;
             //b2= ~b1;  //NOT COMPILING
 
-            uint j1 = 7, j2;
-            j2 = ~j1;
+            //uint j1 = 7, j2;
+            //j2 = ~j1;
             //j2 = !j1; //NOT COMPILING
 
             #endregion

@@ -13,7 +13,15 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P1_9_NumbersAddition()
         {
+            Console.WriteLine("Введите x:");
+            int x = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Введите y:");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            int z = x + y;
+            Console.WriteLine($"Сумма = {z}");
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -23,7 +31,27 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P2_9_CheckResultAddition()
         {
+            Console.WriteLine("Введите x:");
+            int x = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Введите y:");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите сумму x+y:");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            int z = x + y;
+
+            if (z == a)
+            {
+                Console.WriteLine("Правильно");
+            }
+
+            else
+            {
+                Console.WriteLine("Неправильно");
+            }
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -33,7 +61,39 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P3_9_CheckResultAdditionWithTips()
         {
+            Console.WriteLine("Введите x:");
+            int x = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Введите y:");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите сумму x+y:");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            int z = x + y;
+
+            if (z == a)
+            {
+                Console.WriteLine("Правильно");
+            }
+
+            else
+            {
+                Console.WriteLine("Неправильно");
+
+                if (z < a)
+                {
+                    Console.WriteLine("Должно быть меньше");
+                }
+
+                else
+                {
+                    Console.WriteLine("Должно быть больше");
+
+                }
+            }
+
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -42,7 +102,70 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P4_9_CheckResultWithOperator()
         {
+            Console.WriteLine("Введите x:");
+            int x = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Введите y:");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введити оператор (+ или -)");
+            string op = Console.ReadLine();
+
+            if (op == "+")
+            {
+                int sum = x + y;
+                Console.WriteLine("Введите сумму x+y:");
+                int mySum = Convert.ToInt32(Console.ReadLine());
+
+                if (sum == mySum)
+                {
+                    Console.WriteLine("Правильно");
+                }
+
+                else
+                {
+                    Console.WriteLine("Неправильно");
+
+                    if (sum < mySum)
+                    {
+                        Console.WriteLine("Должно быть меньше");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Должно быть больше");
+                    }
+
+                }
+            }
+
+            else
+            {
+                int dif = x - y;
+                Console.WriteLine("Введите разность x-y:");
+                int myDif = Convert.ToInt32(Console.ReadLine());
+
+                if (dif == myDif)
+                {
+                    Console.WriteLine("Правильно");
+                }
+
+                else
+                {
+                    Console.WriteLine("Неправильно");
+
+                    if (dif < myDif)
+                    {
+                        Console.WriteLine("Должно быть меньше");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Должно быть больше");
+                    }
+                }
+            }
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -51,7 +174,88 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P5_9_CheckResultWithAttemps()
         {
+            Console.WriteLine("Введите x:");
+            int x = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Введите y:");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введити оператор (+ или -)");
+            string op = Console.ReadLine();
+
+            if (op == "+")
+            {
+                int sum = x + y;
+                int i = 0;
+                int mySum = 0;
+
+                for (; i < 3 && sum != mySum; i++)
+                {
+                    Console.WriteLine("Введите сумму x+y:");
+                    mySum = Convert.ToInt32(Console.ReadLine());
+
+                    if (sum == mySum)
+                    {
+                        Console.WriteLine("Правильно");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Неправильно");
+
+                        if (sum < mySum)
+                        {
+                            Console.WriteLine("Должно быть меньше");
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Должно быть больше");
+                        }
+                    }
+
+                }
+            }
+
+            else if (op == "-")
+            {
+                int dif = x - y;
+                int i = 0;
+                int myDif = 0;
+
+                for (; i < 3 && dif != myDif; i++)
+                {
+                    Console.WriteLine("Введите разность x-y:");
+                    myDif = Convert.ToInt32(Console.ReadLine());
+
+                    if (dif == myDif)
+                    {
+                        Console.WriteLine("Правильно");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Неправильно");
+
+                        if (dif < myDif)
+                        {
+                            Console.WriteLine("Должно быть меньше");
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Должно быть больше");
+                        }
+                    }
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("Неверный оператор");
+            }
+
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -60,6 +264,55 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P6_9_FiveNumbersAddition()
         {
+            Console.WriteLine("Введите x:");
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите y:");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите b:");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите k:");
+            int k = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите h:");
+            int h = Convert.ToInt32(Console.ReadLine());
+
+            int a = 0;
+            int i = 0;
+            int z = x + y + b + k + h;
+
+            for (; i < 2 && a != z; i++)
+            {
+                Console.WriteLine("Введите сумму x+y+b+k+h:");
+                a = Convert.ToInt32(Console.ReadLine());
+
+                if (z == a)
+                {
+                    Console.WriteLine("Правильно");
+                }
+
+                else
+                {
+                    Console.WriteLine("Неправильно");
+
+                    if (z < a)
+                    {
+                        Console.WriteLine("Должно быть меньше");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Должно быть больше");
+
+                    }
+                }
+            }
+
+            Console.WriteLine();
+
+
 
         }
 
@@ -69,14 +322,83 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P7_9_NumbersResultWithInfoIfCorrect()
         {
+            Console.WriteLine("Введите x:");
+            int x = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Введите y:");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите b:");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите k:");
+            int k = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите h:");
+            int h = Convert.ToInt32(Console.ReadLine());
+
+            int a = 0;
+            int i = 0;
+            int z = x + y + b + k + h;
+
+            for (; i < 2 && a != z; i++)
+            {
+                Console.WriteLine("Введите сумму x+y+b+k+h:");
+                a = Convert.ToInt32(Console.ReadLine());
+
+                if (z == a)
+                {
+                    Console.WriteLine("Правильно");           
+                }
+
+                else
+                {
+                    Console.WriteLine("Неправильно");
+
+                    if (z < a)
+                    {
+                        Console.WriteLine("Должно быть меньше");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Должно быть больше");
+
+                    }
+                }
+            }
+
+            if(z == a)
+            {
+                Console.WriteLine("Задача была решена верно");
+            }
+
+            else
+            {
+                Console.WriteLine("Задача была решена неверно");
+            }
+
+            Console.WriteLine();
         }
+    
 
-        /// <summary>
-        /// B3-P8/9. CircleArea. Написать алгоритм, рассчитывающий площадь круга по заданному радиусу. 
-        /// </summary>
-        public static void B3_P8_9_CircleArea()
+
+
+            /// <summary>
+            /// B3-P8/9. CircleArea. Написать алгоритм, рассчитывающий площадь круга по заданному радиусу. 
+            /// </summary>
+            public static void B3_P8_9_CircleArea()
         {
+            const double pi = 3.14;
+
+            Console.WriteLine("Введите радиус круга");
+            double radius = Convert.ToDouble(Console.ReadLine());
+
+            double radiusSquared = Math.Pow(radius, 2);
+
+            double squre = pi * radiusSquared;
+            Console.WriteLine($"Плащадь круга равна {squre}");
+            
 
         }
 
@@ -85,7 +407,44 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P9_9_CreaditCalculator()
         {
+            Console.WriteLine("Введите сумму кредита");
+            decimal sumLoan = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Введите проценты кредита ");
+            decimal interest = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Введите срок кредита в месяцах");
+            int months = Convert.ToInt32(Console.ReadLine());
+
+            decimal Loan = sumLoan;
+
+            decimal loanMonth = sumLoan / months;
+
+            decimal interestmonth = (interest / 100) / months;
+
+            decimal sumMonth = 0;
+
+            decimal allintersts = 0;
+
+           
+            for (int i = 1; i <= months; i++)
+            {
+                sumMonth = loanMonth + (sumLoan * interestmonth);
+                Console.WriteLine($"Cумма в {i} равна {sumMonth}");
+
+                allintersts += (sumLoan * interestmonth);
+
+                sumLoan -= loanMonth;
+
+                
+            }
+
+            decimal genSum = Loan + allintersts;
+            Console.WriteLine($"Общая сумма за период = {genSum}");
+
+
 
         }
     }
+
 }
